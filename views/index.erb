@@ -1,0 +1,12 @@
+<!-- views/index.erb -->
+<h1>This are my recipes</h1>
+
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <p><%= recipe.name %>, description: <%= recipe.description %> <a href="/recipes/<%= index %>"> delete</a></p>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/new">add recipe</a>
